@@ -1,0 +1,210 @@
+#:kivy 1.11.1
+
+
+<Button>:
+    size_hint: 0.50, 0.10
+
+
+<MyGui>:
+#---IDs---------------------------------
+    f_comic_url: url
+    f_comic_name: comic_name
+    f_issue_number: issue_number
+    f_year: year
+
+
+#---Button------------------------------
+    Button:
+        text: 'Donwload'
+        pos_hint: {'x': 0.25, 'y': 0.03}
+        on_press: root.download_button_pressed(self)
+
+
+#---ComicProperties---------------------
+    Label:
+        color: 0, 0, 0, 1
+        text: 'Comic url:'
+        pos_hint: {'x': 0.05, 'y': 0.90}
+        size_hint: 0.10, 0.05
+    TextInput:
+        id: url
+        multiline: False
+        pos_hint: {'x': 0.20, 'y': 0.90}
+        size_hint: 0.78, 0.05
+        hint_text: "Enter 'None' if you don't have the url"
+
+    Label:
+        color: 0, 0, 0, 1
+        text: 'Comic name:'
+        pos_hint: {'x': 0.05, 'y': 0.80}
+        size_hint: 0.10, 0.05
+    TextInput:
+        id: comic_name
+        multiline: False
+        pos_hint: {'x': 0.20, 'y': 0.80}
+        size_hint: 0.78, 0.05
+
+    Label:
+        color: 0, 0, 0, 1
+        text: 'Issue number:'
+        pos_hint: {'x': 0.35, 'y': 0.72}
+        size_hint: 0.10, 0.05
+    TextInput:
+        id: issue_number
+        multiline: False
+        pos_hint: {'x': 0.47, 'y': 0.72}
+        size_hint: 0.10, 0.05
+
+    Label:
+        color: 0, 0, 0, 1
+        text: 'Year:'
+        pos_hint: {'x': 0.60, 'y': 0.72}
+        size_hint: 0.10, 0.05
+    TextInput:
+        id: year
+        multiline: False
+        pos_hint: {'x': 0.68, 'y': 0.72}
+        size_hint: 0.10, 0.05
+
+
+#---------Browser-----------------------
+    Label:
+        color: 0, 0, 0, 1
+        text: 'Browser:'
+        pos_hint: {'x': 0.05, 'y': 0.60}
+        size_hint: 0.10, 0.05
+
+    #---Chrome-----------
+    Label:
+        color: 0, 0, 0, 1
+        text: 'Chrome'
+        pos_hint: {'x': 0.21, 'y': 0.60}
+        size_hint: 0.10, 0.05
+    CheckBox:
+        browser: 'chrome'
+        on_active: root.browser_option(self, self.active, self.browser)
+        color: 0, 0, 0, 1
+        group: 'browser'
+        pos_hint: {'x': 0.15, 'y': 0.60}
+        size_hint: 0.10, 0.05
+
+    #---Firefox----------
+    Label:
+        color: 0, 0, 0, 1
+        text: 'Firefox'
+        pos_hint: {'x': 0.36, 'y': 0.60}
+        size_hint: 0.10, 0.05
+    CheckBox:
+        browser: 'firefox'
+        on_active: root.browser_option(self, self.active, self.browser)
+        color: 0, 0, 0, 1
+        group: 'browser'
+        pos_hint: {'x': 0.30, 'y': 0.60}
+        size_hint: 0.10, 0.05
+
+
+#---------Mode--------------------------
+    Label:
+        color: 0, 0, 0, 1
+        text: 'Mode:'
+        pos_hint: {'x': 0.05, 'y': 0.50}
+        size_hint: 0.10, 0.05
+
+    #---Head-------------
+    Label:
+        color: 0, 0, 0, 1
+        text: 'Head'
+        pos_hint: {'x': 0.20, 'y': 0.50}
+        size_hint: 0.10, 0.05
+    CheckBox:
+        mode: 'head'
+        on_active: root.mode_option(self, self.active, self.mode)
+        color: 0, 0, 0, 1
+        group: 'mode'
+        pos_hint: {'x': 0.15, 'y': 0.50}
+        size_hint: 0.10, 0.05
+
+    #---HeadLess---------
+    Label:
+        color: 0, 0, 0, 1
+        text: 'Headless (Unstable for chrome)'
+        pos_hint: {'x': 0.46, 'y': 0.50}    #'x': 0.37 previous location
+        size_hint: 0.10, 0.05
+    CheckBox:
+        mode: 'headless'
+        on_active: root.mode_option(self, self.active, self.mode)
+        color: 0, 0, 0, 1
+        group: 'mode'
+        pos_hint: {'x': 0.30, 'y': 0.50}
+        size_hint: 0.10, 0.05
+
+
+#---Qualtiy-----------------------------
+    Label:
+        color: 0, 0, 0, 1
+        text: 'Quality:'
+        pos_hint: {'x': 0.05, 'y': 0.40}
+        size_hint: 0.10, 0.05
+
+    #---Low--------------
+    Label:
+        color: 0, 0, 0, 1
+        text: 'Low'
+        pos_hint: {'x': 0.195, 'y': 0.40}
+        size_hint: 0.10, 0.05
+    CheckBox:
+        quality: 'low'
+        on_active: root.quality_option(self, self.active, self.quality)
+        color: 0, 0, 0, 1
+        group: 'quality'
+        pos_hint: {'x': 0.15, 'y': 0.40}
+        size_hint: 0.10, 0.05
+    
+    #---High-------------
+    Label:
+        color: 0, 0, 0, 1
+        text: 'High'
+        pos_hint :{'x': 0.35, 'y': 0.40}
+        size_hint: 0.10, 0.05
+    CheckBox:
+        quality: 'high'
+        on_active: root.quality_option(self, self.active, self.quality)
+        color: 0, 0, 0, 1
+        group: 'quality'
+        pos_hint: {'x': 0.30, 'y': 0.40} 
+        size_hint: 0.10, 0.05
+
+#---ImagesDeleteOption-----------------------------
+    Label:
+        color: 0, 0, 0, 1
+        text: 'Images:'
+        pos_hint: {'x': 0.05, 'y': 0.30}
+        size_hint: 0.10, 0.05
+
+    #---Delete--------------
+    Label:
+        color: 0, 0, 0, 1
+        text: 'Delete'
+        pos_hint: {'x': 0.195, 'y': 0.30}
+        size_hint: 0.10, 0.05
+    CheckBox:
+        delete_image: 'yes'
+        on_active: root.image_option(self, self.active, self.delete_image)
+        color: 0, 0, 0, 1
+        group: 'image_delete_option'
+        pos_hint: {'x': 0.15, 'y': 0.30}
+        size_hint: 0.10, 0.05
+    
+    #---Keep-------------
+    Label:
+        color: 0, 0, 0, 1
+        text: 'Keep'
+        pos_hint :{'x': 0.35, 'y': 0.30}
+        size_hint: 0.10, 0.05
+    CheckBox:
+        delete_image: 'no'
+        on_active: root.image_option(self, self.active, self.delete_image)
+        color: 0, 0, 0, 1
+        group: 'image_delete_option'
+        pos_hint: {'x': 0.30, 'y': 0.30}
+        size_hint: 0.10, 0.05
