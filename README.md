@@ -8,5 +8,5 @@
 </div>
 
 <p align="center">
-    ![codown gif demo](https://i.imgur.com/FmdxaQq.gif)
+<img alt="codown gif demo" src="https://i.imgur.com/FmdxaQq.gif">
 </p>
