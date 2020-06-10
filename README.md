@@ -7,4 +7,4 @@
 <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2020">
 </div>
 
-<img alt="codown gif demo" src="https://imgur.com/a/0HH6CgS">
+![codown gif demo](https://i.imgur.com/FmdxaQq.gif)
