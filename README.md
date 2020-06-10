@@ -27,4 +27,4 @@ Codown is built using the previous work that I put in ![read_comic_offline](http
 
 ## Youtube:
 
-[![Youtube video link](https://www.youtube.com/watch?v=5cFAoxlZrNk/0.jpg)](https://www.youtube.com/watch?v=5cFAoxlZrNk)
+[![Youtube video link](https://www.youtube.com/vi/5cFAoxlZrNk/0.jpg)](https://www.youtube.com/watch?v=5cFAoxlZrNk)
