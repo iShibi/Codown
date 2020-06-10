@@ -1,7 +1,7 @@
 # Codown - a comics downloader
 [![GitHub stars](https://img.shields.io/github/stars/shibi391/Codown?style=flat-square)](https://github.com/shibi391/codown/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/shibi391/Codown?style=flat-square)](https://github.com/Microsoft/vscode/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc)
-[![GitHub license](https://img.shields.io/github/license/Codown?style=flat-square)](https://github.com/shibi391/codown/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/shibi391/Codown?style=flat-square)](https://github.com/shibi391/codown/blob/master/LICENSE)
 ![Maintenance](https://img.shields.io/maintenance/yes/2020?style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/shibi391/Codown?color=red&style=flat-square)
 
