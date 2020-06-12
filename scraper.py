@@ -1,5 +1,4 @@
 import json
-import time
 import os
 
 with open('user_input.json', 'r') as openfile:
