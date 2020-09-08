@@ -13,8 +13,7 @@
 
 ## Installation:
 
-All the necessary files are included in the repository, but you may have to replace them with versions that support your
-system. These are the files which you may have to download and put in place of the one that comes with the repository:
+Download the required driver files from the links given below, extract them and then put the extracted binary file in the drivers folder:
 
 
 - [Chromedriver](https://chromedriver.chromium.org/downloads) for Chrome.
